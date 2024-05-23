@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/messageBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/btn_circle_background"
+                            android:src="@drawable/messenger_icon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/searchBtn"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/searchBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/btn_circle_background"
+                            android:src="@drawable/search_icon"
+                            app:layout_constraintEnd_toStartOf="@+id/messageBtn"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/addBtn"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/addBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/btn_circle_background"
+                            android:src="@drawable/add_icon_nobg"
+                            app:layout_constraintEnd_toStartOf="@+id/searchBtn"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:layout_editor_absoluteX="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatarImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/avatar_example"
+                    app:civ_border_color="@color/outline_icon"
+                    app:civ_border_width="0.5dp"
+                    app:layout_constraintEnd_toStartOf="@+id/postContentBtn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/postContentBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_background_button"
+                    android:gravity="start|center"
+                    android:paddingStart="20dp"
+                    android:text="Bạn đang nghĩ gì?"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/addImageIconBtn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/avatarImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/addImageIconBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/image_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/postContentBtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/line_gray"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                tools:layout_editor_absoluteX="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/storyImage"
+                            android:layout_width="110dp"
+                            android:layout_height="140dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/avatar_example"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:riv_border_color="@color/line_gray"
+                            app:riv_border_width="1dp"
+                            app:riv_corner_radius_top_left="10dp"
+                            app:riv_corner_radius_top_right="10dp"
+                            tools:layout_editor_absoluteY="0dp" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="110dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/border_background_story"
+                            app:layout_constraintStart_toStartOf="@+id/storyImage"
+                            app:layout_constraintTop_toBottomOf="@+id/storyImage" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/border_background_button_white"
+                            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageButton"
+                            app:layout_constraintEnd_toEndOf="@+id/appCompatImageButton"
+                            app:layout_constraintStart_toStartOf="@+id/appCompatImageButton"
+                            app:layout_constraintTop_toTopOf="@+id/appCompatImageButton" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/appCompatImageButton"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/add_icon"
+                            app:layout_constraintBottom_toTopOf="@id/view"
+                            app:layout_constraintEnd_toEndOf="@+id/storyImage"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/view" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Tạo tin"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/view"
+                            app:layout_constraintEnd_toEndOf="@+id/view"
+                            app:layout_constraintStart_toStartOf="@+id/view" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listStoryRv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="6dp"
+                            app:layout_constraintStart_toEndOf="@+id/storyImage" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/line_gray"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/dashboardRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

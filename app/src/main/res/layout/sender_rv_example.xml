@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/radius_comment_background_blue"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="24dp">
+
+
+        <TextView
+            android:id="@+id/senderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:text="Bảng mô tả công việc giúp nhà tuyển dụng, quản lý nhân sựnắm được nội dung và yêu cầu của công việc. Đồng thời, nó cũng giúp ứng viên hiểu rõ về vị trí mà họ đang ứng tuyển để có thể chuẩn bị tốt hơn cho quá trình phỏng vấn và thực hiện công việc khi được tuyển dụng"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
